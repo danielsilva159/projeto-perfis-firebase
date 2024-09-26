@@ -1,0 +1,18 @@
+<div>
+  <form [formGroup]="form" (submit)="entrar()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Senha</mat-label>
+      <input type="password" matInput formControlName="senha" />
+    </mat-form-field>
+    <div>
+      <button type="submit" mat-stroked-button [disabled]="!form.valid">
+        Entrar
+      </button>
+    </div>
+  </form>
+</div>
