@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {
   FormBuilder,
   FormsModule,
@@ -9,8 +8,8 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AuthService } from '../../services/auth-service.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth-service.service';
 
 @Component({
   selector: 'app-login',

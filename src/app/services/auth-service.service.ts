@@ -19,8 +19,8 @@ export class AuthService {
   }
 
   // Login com email e senha
-  login(email: string, password: string) {
-    return this.afAuth.signInWithEmailAndPassword(email, password);
+  async login(email: string, password: string) {
+    await this.afAuth.signInWithEmailAndPassword(email, password);
   }
 
   // Registro com email e senha
@@ -42,8 +42,6 @@ export class AuthService {
             ...profileData, // Inclua os dados adicionais do perfil
           });
       }
-
-      return result;
     } catch (error) {
       console.error('Erro ao cadastrar usuário:', error);
       throw error;
